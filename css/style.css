@@ -1,0 +1,666 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #101010;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Global reset end */
+
+/* Root */
+
+:root {
+  --primary-color: #020202;
+  --text-color: #FFFFFF;
+}
+
+/* Header Start */
+
+body .header_container {
+  background-color: var(--primary-color);
+}
+
+.header_container .header_content {
+  max-width: 1440px;
+  height: 112px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header_content .logo {
+  width: 53px;
+  height: 54px;
+}
+
+.navigation nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  margin-left: 47px;
+}
+
+ul *:not(:last-child) {
+  margin-right: 24px;
+}
+
+ul li a {
+  color: var(--text-color);
+}
+
+.download {
+  margin-left: 754px;
+  background: #FCAF17;
+  width: 193px;
+  height: 52px;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  text-align: center;
+  border: none;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.011em;
+}
+
+.download:hover {
+  background-color: #bb8210;
+}
+
+.search {
+  margin-left: 40px;
+  width: 48px;
+  height: 48px;
+  background: #5A5A5A;
+  border-radius: 100px;
+  border: none;
+}
+
+.search:active {
+  transform: scale(0.9);
+}
+
+.person {
+  width: 48px;
+  height: 48px;
+  background: #5A5A5A;
+  border-radius: 100px;
+  border: none;
+}
+
+.person:active {
+  transform: scale(0.9);
+}
+
+
+.main-imagewrapper {
+  width: 100%;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  right: 0%;
+  background-color: #000000; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 4px; 
+  padding: 10px; 
+  min-width: 119px;
+  z-index: 1;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.dropdown-content ul li {
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #FCAF17; 
+}
+
+.dropdown-content ul li:last-child {
+  margin-right: 20px;
+}
+
+.dropdown-content ul li:hover { 
+  background: #FCAF17;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.arrow-down {
+  position: absolute; 
+  left: 45px;
+  bottom: -2px;
+  cursor: pointer;
+}
+
+.dropdown-text {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+}
+
+.games-text {
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 72px;
+  letter-spacing: -0.011em;
+  margin: 80px 200px;
+}
+
+.games-buttons {
+  color: white;
+}
+
+.games {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1880px;
+  margin: 0 auto;
+}
+
+.pc {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.011em;
+  text-align: center;
+  color: white;
+  background: #606060;
+  width: 70px;
+  height: 32px;
+  gap: 0px;
+  border-radius: 100px;
+  opacity: 0px;
+  border: none;
+}
+
+.pc:active {
+  transform: scale(0.9);
+}
+
+.console {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.011em;
+  text-align: center;
+  color: white;
+  background: #606060;
+  width: 106px;
+  height: 32px;
+  gap: 0px;
+  border-radius: 100px;
+  opacity: 0px;
+  border: none;
+}
+
+.console:active {
+  transform: scale(0.9);
+}
+
+.portable-devices {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.011em;
+  text-align: center;
+  color: white;
+  background: #606060;
+  width: 196px;
+  height: 32px;
+  gap: 0px;
+  border-radius: 100px;
+  opacity: 0px;
+  border: none;
+}
+
+.portable-devices:active {
+  transform: scale(0.9);
+}
+
+.consoles {
+  display: flex;
+  margin-top: 100px;
+  margin-right: 200px;
+}
+
+.games-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  gap: 150px;
+}
+
+.see-all-games {
+  margin-left: 825px;
+  margin-top: 100px;
+  background: #FCAF17;
+  width: 260px;
+  height: 63px;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  text-align: center;
+  border: none;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.011em;
+}
+
+.see-all-games:hover {
+  background-color: #bb8210;
+}
+
+.news-text {
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 72px;
+  letter-spacing: -0.011em;
+  margin: 250px 200px 50px 200px;
+}
+
+.gta6trailer {
+  width: 1100px;
+  height: 600px;
+  border-radius: 16px;
+  background-color: #020202;
+  margin-left: 200px;
+}
+
+.rockstar {
+  width: 300px;
+  height: 265px;
+  border-radius: 16px;
+  background-color: #020202;
+  margin-left: 200px;
+}
+
+.rockstar-image {
+  width: 300px;
+  height: 160px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.gtaonline {
+  margin-top: 70px;
+  width: 300px;
+  height: 265px;
+  border-radius: 16px;
+  background-color: #020202;
+  margin-left: 200px;
+}
+
+.gtaonline-image {
+  width: 300px;
+  height: 160px;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.news {
+  display: flex;
+}
+
+.vertical-images{
+  display: flex;
+  flex-direction: column;
+}
+
+.gta6trailer-image {
+  width: 1100px;
+}
+
+.gta6trailer-text-one{
+  margin-top: 22px;
+  margin-left: 32px;
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.011em;
+}
+
+.gta6trailer-text-two{
+  margin-top: 22px;
+  margin-left: 32px;
+  color: #797979;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.011em;
+}
+
+.rockstar-text-one {
+  margin-top: 12px;
+  margin-left: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19.5px;
+  letter-spacing: -0.011em;
+}
+
+.rockstar-text-two {
+  margin-left: 12px;
+  margin-top: 12px;
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: -0.011em;
+  color: #797979;
+}
+
+.rockstar-text-margin {
+  margin-left: 20px;
+}
+
+.gtaonline-text-one {
+  margin-top: 12px;
+  margin-left: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19.5px;
+  letter-spacing: -0.011em;
+}
+
+.gtaonline-text-two {
+  margin-left: 12px;
+  margin-top: 12px;
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: -0.011em;
+  color: #797979;
+}
+
+.gtaonline-text-margin {
+  margin-left: 20px;
+}
+
+.launcher-background {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 200px;
+  width: 1600px;
+  height: 700px;
+  gap: 0px;
+  border-radius: 16px;
+  opacity: 0px;
+}
+
+.launcher-images {
+  margin-left: 300px;
+  margin-top: 115px;
+  position: absolute;
+  display: flex;
+}
+
+.launcher-logo {
+  margin-top: 45px;
+  width: 200px;
+  height: 190px;
+}
+
+.launcher {
+  margin-left: 138px;
+  height: 636px;
+}
+
+.logo-text {
+  margin-top: 70px;
+  margin-left: 20px;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 70px;
+  letter-spacing: -0.011em;
+}
+
+.launcher-text{
+  position: absolute;
+  font-size: 43px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.011em;
+  margin-left: 305px;
+  margin-top: 402px;
+}
+
+.launcher-download {
+  position: absolute;
+  margin-left: 305px;
+  margin-top: 600px;
+  background: #FCAF17;
+  width: 360px;
+  height: 75px;
+  border-radius: 8px;
+  font-size: 24px;
+  transition: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  text-align: center;
+  border: none;
+  font-weight: 800;
+  line-height: 30px;
+  letter-spacing: -0.011em;
+  box-shadow: 0px 4px 16px 1px #00000052;
+}
+
+.launcher-download:hover {
+  background-color: #bb8210;
+}
+
+.games-launcher {
+  margin-top: 100px;
+}
+
+footer {
+  margin-top: 1000px;
+  position: relative;
+  background-color: #000000;
+  max-width: 100%;
+  height: 238px;
+}
+
+.footer-logo {
+  margin-top: 90px;
+  margin-left: 200px;
+}
+
+.footer-ul {
+  margin-top: 90px;
+  color: #B1B1B1;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.011em;
+}
+
+.inc {
+  color: #818181;
+  margin-left: 308px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19.5px;
+  letter-spacing: -0.011em;
+}
+
+.logo-href {
+  margin-left: 900px;
+  margin-top: 100px;
+  display: flex;
+}
+
+.footer-flex {
+  display: flex;
+}
